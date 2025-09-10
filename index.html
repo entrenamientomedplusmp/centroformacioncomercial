@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrenamiento Comercial | MedPlus</title>
+  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo" src="logo-medplus.png" alt="MedPlus Medicina Prepagada" />
+      <div class="brand-text">
+        <span class="brand-title">MedPlus</span>
+        <span class="brand-subtitle">Entrenamiento Comercial</span>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-link is-active" data-section="inicio">Inicio</button>
+      <button class="nav-link" data-section="modulos">Módulos de formación</button>
+      <button class="nav-link" data-section="galeria">Galería</button>
+      <button class="nav-link" data-section="recursos">Recursos</button>
+      <button class="nav-link" data-section="contacto">Contacto</button>
+    </nav>
+  </header>
+
+  <!-- Contenido dinámico -->
+  <main id="app" class="app" tabindex="-1" aria-live="polite"></main>
+
+  <!-- ====== INICIO ====== -->
+  <template id="tpl-inicio">
+    <section class="hero fade">
+      <div class="hero-text">
+        <h1>Formamos equipos comerciales imparables</h1>
+        <p>
+          Bienvenido/a al portal de <strong>Entrenamiento Comercial MedPlus</strong>. 
+          Aquí encontrará módulos de formación, recursos prácticos, casos reales y material audiovisual 
+          para potenciar las competencias del equipo a nivel nacional.
+        </p>
+        <div class="hero-cta">
+          <a href="#" class="btn primary" data-section="modulos">Explorar módulos</a>
+          <a href="#" class="btn ghost" data-section="recursos">Ver recursos</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1600&auto=format&fit=crop" alt="Equipo comercial entrenando" />
+      </div>
+    </section>
+  </template>
+
+  <!-- ====== MÓDULOS DE FORMACIÓN ====== -->
+  <template id="tpl-modulos">
+    <section class="section fade">
+      <h2 class="section-title">Módulos de formación</h2>
+      <p class="section-subtitle">Seleccione un módulo para ver su detalle.</p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Introducción a Medicina Prepagada</h3>
+          <p>Conceptos claves del sector, diferencias con EPS y posicionamiento de valor MedPlus.</p>
+          <button class="btn secondary open-module" data-module-id="intro-mpp">Abrir módulo</button>
+        </article>
+
+        <article class="card">
+          <h3>Plan Azul Plus – Producto</h3>
+          <p>Estructura modular, coberturas, objeciones frecuentes y pitch comercial.</p>
+          <button class="btn secondary open-module" data-module-id="azul-plus">Abrir módulo</button>
+        </article>
+
+        <article class="card">
+          <h3>Venta Consultiva</h3>
+          <p>Diagnóstico de necesidades, propuesta de valor y cierres efectivos.</p>
+          <button class="btn secondary open-module" data-module-id="venta-consultiva">Abrir módulo</button>
+        </article>
+
+        <article class="card">
+          <h3>Conecta CRM – Flujo Comercial</h3>
+          <p>Registro, seguimiento, etapas del proceso y buenas prácticas de gestión.</p>
+          <button class="btn secondary open-module" data-module-id="conecta-crm">Abrir módulo</button>
+        </article>
+      </div>
+
+      <!-- Sub-sección: Nuestros planes -->
+      <div class="sub-section">
+        <h2 class="section-title">Nuestros planes</h2>
+        <p class="section-subtitle">Conozca la oferta de planes disponibles.</p>
+        <div class="cards-grid">
+  <!-- Planes Azules -->
+  <article class="card"
+    style="
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('img/planes-azules.png') center / cover no-repeat;
+      color:#fff; min-height:200px;
+      display:flex; flex-direction:column; justify-content:flex-end; gap:10px;
+    ">
+    <h3 style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Planes Azules</h3>
+    <p style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Portafolio de planes azules.</p>
+    <a class="btn secondary" href="planes-azules.html">Ver detalle</a>
+  </article>
+
+  <!-- Planes Excelsos -->
+  <article class="card"
+    style="
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('img/planes-excelsos.png') center / cover no-repeat;
+      color:#fff; min-height:200px;
+      display:flex; flex-direction:column; justify-content:flex-end; gap:10px;
+    ">
+    <h3 style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Planes Excelsos</h3>
+    <p style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Beneficios premium y coberturas ampliadas.</p>
+    <a class="btn secondary" href="planes-excelsos.html">Ver detalle</a>
+  </article>
+
+  <!-- Planes Light -->
+  <article class="card"
+    style="
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('img/planes-light.png') center / cover no-repeat;
+      color:#fff; min-height:200px;
+      display:flex; flex-direction:column; justify-content:flex-end; gap:10px;
+    ">
+    <h3 style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Planes Light</h3>
+    <p style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Opciones ligeras y flexibles.</p>
+    <a class="btn secondary" href="planes-light.html">Ver detalle</a>
+  </article>
+
+  <!-- Plan Azul Plus -->
+  <article class="card"
+    style="
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('img/plan-azul-plus.png') center / cover no-repeat;
+      color:#fff; min-height:200px;
+      display:flex; flex-direction:column; justify-content:flex-end; gap:10px;
+    ">
+    <h3 style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Plan Azul Plus</h3>
+    <p style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Acceso ampliado y servicios preferenciales.</p>
+    <a class="btn secondary" href="plan-azul-plus.html">Ver detalle</a>
+  </article>
+
+  <!-- Planes AMD -->
+  <article class="card"
+    style="
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('img/planes-amd.png') center / cover no-repeat;
+      color:#fff; min-height:200px;
+      display:flex; flex-direction:column; justify-content:flex-end; gap:10px;
+    ">
+    <h3 style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Planes AMD</h3>
+    <p style="margin:0;text-shadow:0 2px 6px rgba(0,0,0,.4)">Soluciones para colectivos o empresas.</p>
+    <a class="btn secondary" href="planes-amd.html">Ver detalle</a>
+  </article>
+</div>
+      </div>
+    </section>
+  </template>
+
+  <!-- ====== GALERÍA ====== -->
+  <template id="tpl-galeria">
+    <section class="section fade">
+      <h2 class="section-title">Galería</h2>
+      <p class="section-subtitle">Imágenes y videos de nuestras capacitaciones.</p>
+      <div class="cards-grid">
+        <figure class="card media-card">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop" alt="Capacitación en sala de juntas" />
+          <figcaption>Entrenamiento en sala</figcaption>
+        </figure>
+        <figure class="card media-card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Sesión práctica con equipos" />
+          <figcaption>Sesión práctica</figcaption>
+        </figure>
+        <figure class="card media-card">
+          <button class="media-thumb" data-open-modal="video-1" aria-haspopup="dialog" aria-controls="modal">
+            🎬 Ver video: Cierre de mes – Tips
+          </button>
+          <figcaption>Video de técnicas</figcaption>
+        </figure>
+      </div>
+    </section>
+  </template>
+
+  <!-- ====== RECURSOS ====== -->
+  <template id="tpl-recursos">
+    <section class="section fade">
+      <h2 class="section-title">Recursos</h2>
+      <ul class="resource-list">
+        <li><a href="#" target="_blank" rel="noopener">Guía rápida de discurso comercial (PDF)</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Checklist de inducción de nuevos ingresos</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Plantilla de seguimiento de leads (Excel)</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Lineamientos de marca y vestuario</a></li>
+      </ul>
+    </section>
+  </template>
+
+  <!-- ====== CONTACTO ====== -->
+  <template id="tpl-contacto">
+    <section class="section fade">
+      <h2 class="section-title">Contacto</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" placeholder="Escriba su nombre" required />
+          <small class="error-message">Por favor, ingrese su nombre.</small>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="nombre@empresa.com" required />
+          <small class="error-message">Ingrese un correo válido.</small>
+        </div>
+        <div class="form-field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="¿En qué podemos apoyarle?" required></textarea>
+          <small class="error-message">El mensaje no puede estar vacío.</small>
+        </div>
+        <button class="btn primary" type="submit">Enviar</button>
+      </form>
+    </section>
+  </template>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="document">
+      <header class="modal-header">
+        <h3 id="modal-title">Contenido</h3>
+        <button class="icon-btn" aria-label="Cerrar" title="Cerrar" data-close-modal>&times;</button>
+      </header>
+      <div class="modal-body" id="modal-body"></div>
+      <footer class="modal-footer">
+        <button class="btn ghost" data-close-modal>Cerrar</button>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> MedPlus Medicina Prepagada – Vicepresidencia Comercial - Entrenamiento Comercial. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>
